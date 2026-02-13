@@ -13,7 +13,7 @@ const CHAPTERS = [
                 imgUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Mercury_in_color_-_Prockter07-edit1.jpg/240px-Mercury_in_color_-_Prockter07-edit1.jpg",
                 concept: "序列 (Sequence)", 
                 gadget: "竹蜻蜓", 
-                gadgetImgUrl: "assets/images/竹蜻蜓.jpg", 
+                gadgetImgUrl: "https://chinesedora.com/images/03.jpg", 
                 // ✅ 新增：哆啦A夢的台詞
                 dialogue: "振爲，水星好熱啊！快幫我想想辦法，按順序走到終點吃銅鑼燒降溫！",
                 desc: "地表太熱了！請按順序規劃路徑，穿過蜿蜒的岩石迷宮，找到終點。" 
@@ -32,7 +32,7 @@ const CHAPTERS = [
                 imgUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/The_Earth_seen_from_Apollo_17.jpg/240px-The_Earth_seen_from_Apollo_17.jpg",
                 concept: "優化 (Efficiency)", 
                 gadget: "竹蜻蜓", 
-                gadgetImgUrl: "assets/images/竹蜻蜓.jpg", 
+                gadgetImgUrl: "https://chinesedora.com/images/03.jpg", 
                 dialogue: "振爲，回到地球了！可是垃圾好多，我們用竹蜻蜓直接飛過去吃銅鑼燒吧！",
                 desc: "前面有太空垃圾牆！利用「竹蜻蜓」一次飛兩格，走最短路徑。" 
             },
@@ -47,7 +47,7 @@ const CHAPTERS = [
             },
             { 
                 id: 4, name: "第五站：小行星帶", theme: "asteroid", 
-                imgUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Vesta_full_mosaic.jpg/240px-Vesta_full_mosaic.jpg",
+                imgUrl: "https://upload.wikimedia.org/wikipedia/commons/7/76/Ceres_-_RC3_-_Haulani_Crater_%2822381131691%29_%28cropped%29.jpg",
                 concept: "障礙迴避", 
                 gadget: "石頭帽", 
                 gadgetImgUrl: "https://chinesedora.com/comic/c99.jpg", 
