@@ -89,6 +89,27 @@ export class CanvasManager {
             }
             this.ctx.restore();
         }
+
+        if (window.gameApp && window.gameApp.showHint && target) {
+            const playerPos = window.gameApp.player; // 取得玩家位置
+            const px = this.gridToPixel(playerPos.x);
+            const py = this.gridToPixel(playerPos.y);
+            const tx = this.gridToPixel(target.x);
+            const ty = this.gridToPixel(target.y);
+
+            this.ctx.save();
+            this.ctx.strokeStyle = "#FFFF00"; // 黃色光束
+            this.ctx.lineWidth = 5;
+            this.ctx.setLineDash([10, 10]); // 虛線效果
+            this.ctx.shadowBlur = 10;
+            this.ctx.shadowColor = "white";
+            
+            this.ctx.beginPath();
+            this.ctx.moveTo(px, py);
+            this.ctx.lineTo(tx, ty);
+            this.ctx.stroke();
+            this.ctx.restore();
+        }
     }
 
     fillBg(color, overlay) {
