@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>哆啦A夢：全宇宙程式大冒險</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="home-screen">
+        <div class="home-content">
+            <div class="logo-area">
+                <h1>🌟 哆啦A夢 🌟</h1>
+                <h2>全宇宙程式大冒險</h2>
+            </div>
+            
+            <div class="chapter-tabs">
+                <button class="chapter-tab active">第一章：太陽系探險</button>
+                <button class="chapter-tab locked" onclick="alert('🔒 第二章開發中：時光機之旅！')">第二章：時光機 🔒</button>
+            </div>
+
+            <div class="dora-guide home-guide">
+                <img src="assets/images/doraemon.png" class="dora-avatar" alt="哆啦A夢">
+                <div class="dora-bubble">
+                    <p>嗨，振爲！我是哆啦A夢。<br>我們一起去冒險，尋找最好吃的銅鑼燒吧!!!</p>
+                </div>
+            </div>
+
+            <div id="level-map"></div>
+        </div>
+    </div>
+
+    <div id="game-container" style="display: none;">
+        <header id="ui-header">
+            <button id="back-to-map" class="nav-btn">🌌 回地圖</button>
+            <div class="title-wrap">
+                <h1 id="level-title">載入中...</h1>
+                <div class="concept-tag">本關道具：<span id="gadget-display-area"></span></div>
+            </div>
+        </header>
+
+        <div class="main-layout">
+            <section id="canvas-area">
+                <div id="canvas-wrapper">
+                    <canvas id="gameCanvas"></canvas>
+                    <img id="player-gif" src="assets/images/dora_up.gif" alt="Doraemon">
+                </div>
+                
+                <div class="dora-guide game-guide">
+                    <img src="assets/images/doraemon.png" class="dora-avatar" alt="哆啦A夢">
+                    <div class="dora-bubble">
+                        <p id="dora-speak">振爲，準備好了嗎？</p>
+                    </div>
+                </div>
+            </section>
+
+            <aside id="control-panel">
+                <div class="glass-panel" id="command-display">
+                    <div class="panel-tag">指令執行隊列 (Queue)</div>
+                    <div id="queue-visual"></div>
+                </div>
+
+                <div class="interaction-zone">
+                    <div class="d-pad">
+                        <button class="cmd-btn up" data-command="UP">⬆️</button>
+                        <button class="cmd-btn left" data-command="LEFT">⬅️</button>
+                        <button class="cmd-btn down" data-command="DOWN">⬇️</button>
+                        <button class="cmd-btn right" data-command="RIGHT">➡️</button>
+                    </div>
+
+                    <button id="gadget-btn" class="gadget-btn">
+                        <span id="gadget-btn-content">載入中...</span>
+                    </button>
+
+                    <button id="run-btn" class="start-btn">🚀 執行程式</button>
+
+                    <div class="util-btns">
+                        <button id="undo-btn" class="util-btn undo">↩️ 撤銷</button>
+                        <button id="clear-btn" class="util-btn reset">🗑️ 重設</button>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <div id="victory-overlay" class="overlay hidden">
+        <div class="victory-card">
+            <img src="assets/images/eat.gif" alt="歐依系！" class="victory-gif">
+            <h2>太棒了，振爲！<br>吃到銅鑼燒了！🍩</h2>
+            <p>程式邏輯正確，任務完成！</p>
+            <button id="next-btn" class="action-btn">繼續冒險</button>
+        </div>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
