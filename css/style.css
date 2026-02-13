@@ -219,3 +219,46 @@ body { margin: 0; background: var(--bg-dark); color: white; font-family: 'Segoe 
 
 /* 隱藏舊的 mission-box，因為現在由哆啦A夢說話 */
 .mission-box { display: none; }
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 5px;
+}
+
+.panel-tag {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin: 0; /* 移除原本的 margin */
+}
+
+/* ✨ 指令計數器樣式 ✨ */
+.cmd-counter {
+    font-family: 'Courier New', monospace;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 2px 8px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    color: #00e676; /* 預設綠色 */
+    border: 1px solid rgba(0, 230, 118, 0.3);
+}
+
+.cmd-counter.warning {
+    color: #ffea00; /* 快滿了變黃色 */
+    border-color: rgba(255, 234, 0, 0.3);
+}
+
+.cmd-counter.limit-reached {
+    color: #ff1744; /* 滿了變紅色 */
+    border-color: rgba(255, 23, 68, 0.3);
+    animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-3px); }
+    75% { transform: translateX(3px); }
+}
